@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flames game</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+        .flame-background{
+            overflow: hidden;
+           min-height:90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 0;
+        }
+         .quiz-head{   
+          max-width: 100%;             
+          background-color: grey;
+          width:50%;
+          min-height:44vh;
+          padding-top:32px  
+        } 
+        ul{
+            margin-left: 2rem;
+            list-style: none;
+            margin: 32px ;
+            padding: 22px 0;
+        }
+        li{
+            padding:1rem;
+        }
+        h1{
+            color: red;
+            text-align: center;
+            font-size: 2.5rem;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+        button{
+            margin-bottom: -2rem;
+            cursor: pointer;
+            padding: 1rem;
+            font-size: 2rem;
+            max-width:100%;
+            width: 100%;            
+            display: block;
+            background-color: white;
+        }
+        input[type="text"]{
+            width: 56%;
+            height:2rem;
+        }
+        h3{
+            margin: 12px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flame-background">
+        <div class="quiz-head">
+            <h1 id="hello">check what you are to your crush</h1>
+        <ul>
+            <li>
+                <h3 id="hello1">first Name</h3>
+                <input type="text" name="answer" id="ham" class="hero">
+                
+            </li>
+            <li>
+                <h3 id="hello1">Crush Name</h3>                
+                <input type="text" name="answer" id="b" class="hero"> 
+            </li>
+        </ul>
+        <h1 id="new" style="text-align:center;"></h1>
+        <button id="btn">submit</button>.
+        
+        </div>
+    </div>
+    <script>
+    const flames={
+
+            F:"friends",
+            l:"lovers",
+            A:"admirer or affection",
+            M:"marriage",
+            E:"enemies",
+            s:"secret lovers"            
+    }   
+    const button=document.getElementById('btn')
+        btn.onclick= ()=>{  
+        const Name=document.querySelector("#ham").value
+        const crush=document.querySelector("#b").value
+        const badly=document.getElementById("new") 
+        let first=Name
+        let second=crush
+        for (let i = 0; i < Name.length; i++) {
+        second=second.replace(Name[i], "")    
+        }
+        for (let i = 0; i < crush.length; i++) {
+            first=first.replace(crush[i],"")            
+        }
+        
+        let final=first+second
+        let family=final.length
+        console.log(flames.F.length)
+        if(family===1){
+            badly.textContent=flames.F
+        }else if(family===2){
+            badly.textContent=flames.l
+        }else if(family===3){
+            badly.textContent=flames.A
+        }else if(family===4){
+            badly.textContent=flames.M
+        }else if(family===5){
+            badly.textContent=flames.E
+        }else if(family===6){
+            badly.textContent=flames.s
+        }
+        else if(family===7){
+            badly.textContent=flames.F
+        }else if(family===8){
+            badly.textContent=flames.l
+        }else if(family===9){
+            badly.textContent=flames.A
+        }else if(family===10){
+            badly.textContent=flames.M
+        }else if(family===11){
+            badly.textContent=flames.E
+        }else if(family===12){
+            badly.textContent=flames.s
+        }
+        else if(family===13){
+            badly.textContent=flames.F
+        }else if(family===14){
+            badly.textContent=flames.l
+        }else if(family===15){
+            badly.textContent=flames.A
+        }else if(family===16){
+            badly.textContent=flames.M
+        }else if(family===17){
+            badly.textContent=flames.E
+        }else if(family===18){
+            badly.textContent=flames.s
+        }
+        else if(family===19){
+            badly.textContent=flames.F
+        }else if(family===20){
+            badly.textContent=flames.l
+        }else if(family===21){
+            badly.textContent=flames.A
+        }else if(family===22){
+            badly.textContent=flames.M
+        }else if(family===23){
+            badly.textContent=flames.E
+        }else if(family===24){
+            badly.textContent=flames.s
+        }
+        else if(family===25){
+            badly.textContent=flames.F
+        }else if(family===26){
+            badly.textContent=flames.l
+        }else if(family===27){
+            badly.textContent=flames.A
+        }else if(family===28){
+            badly.textContent=flames.M
+        }else if(family===39){
+            badly.textContent=flames.E
+        }else if(family===30){
+            badly.textContent=flames.s
+        }
+        }       
+    </script>
+</body>
+</html>
